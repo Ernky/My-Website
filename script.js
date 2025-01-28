@@ -34,21 +34,30 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    var d = new Date();
+    var n = d.getUTCHours();
+    var m = d.getUTCMinutes();
+    var s = d.getUTCSeconds();
+
+
     function processCommand(command) {
         const cmd = command.toLowerCase();
 
         // Handle different commands
         switch (cmd) {
-            case 'whois':
-                return 'Hey there! My name is .... , and I am a developer!!!';
-            case 'about':
-                return 'This is a Terminal Website which functions like a terminal with its own commands';
-            case 'help':
-                return 'Types of commands:\n<div class="help-text-container"><pre class="help-text">whois\nhelp\nabout\ncontact\nclear\necho\nproblem</pre></div>';
-            case 'contact':
+            case 'start':
+                return '<div class="help-text-container"><pre class="help-text">\n>SYSTEM INFO\n>ABOUT\n>PROJECT\n>HISTORY\n>CONTACT\n>CLEAR</pre></div>';
+            case 'system info':
+                return 'OS: VEILCHEN_OS_v1.0.4\nHOST: arbeitsstation-system\nKERNEL: 2.4.32-KR\nARCHITECTURE: x86\nPROCESSOR: 2600 RL Z3 Prozessor\nCORE: 1\nMEMORY: 64 words 22 bits\nNETWORK: Verbunden (ETH0)\nLAST_RESTART: 28 Jan 1949\nSYSTEM_TIME: ' + n + ':'+ m +':' + s + ' UTC';
+                
+            case 'ABOUT':
+                return '';
+            case 'PROJECT':
+                return '<div class="help-text-container"></div>';
+            case 'HISTORY':
+                return '<div class="help-text-container"></div>';
+            case 'CONTACT':
                 return 'You can reach me via email at "info@gmail.com".';
-                case 'problem':
-                return 'If you cannot see the inupt field, thats fine keep on writting.';
             case 'clear':
                 clearTerminal();
                 return ''; // Return empty string after clearing terminal
