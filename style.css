@@ -11,7 +11,7 @@ body {
 }
 
 .terminal-window {
-    width: 100%; /* Increased width */
+    /*width: 100%; /* Increased width */
     height: 100%; /* Increased height */
     background-color: #1e1e1e;
     border-radius: 8px;
