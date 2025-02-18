@@ -54,11 +54,11 @@ document.addEventListener('DOMContentLoaded', function() {
             case 'about':
                 return '<div class="help-text-container"><pre class="help-text">SYSTEM INFORMATION - PERSONNEL FILE NO. 486\n-------------------------------------------\nNAME:           Ernki\nRANK:           Intern\nDESIGNATION:    Veilchen Architect\nSTATION:        *Classified*\nSTATUS:         ACTIVE - Deployment Ready</pre></div>' + '\n\nTECHNICAL PROFILE\n-------------------------------------------\n';
             case 'project':
-                return '<div class="help-text-container"></div>';
+                return '<div class="help-text-container">Data Corrupted</div>';
             case 'history':
-                return '<div class="help-text-container"></div>';
+                return '<div class="help-text-container">File Access Permission Denied</div>';
             case 'contact':
-                return '';
+                return '...';
             case 'clear':
                 clearTerminal();
                 return ''; // Return empty string after clearing terminal
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     element.innerHTML += currentChar;
                     i++;
                 }
-                setTimeout(type, 25); // Adjust typing speed here
+                setTimeout(type, 1); // Adjust typing speed here
             }
         }
 
